@@ -17,6 +17,6 @@
 
 - name: Install homebridge
   apt:
-    deb: homebridge
-    state: present
+    name: homebridge
+    state: latest
   when: not homebridge_debug
