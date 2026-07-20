@@ -10,7 +10,7 @@
 - name: Set up homebridge repository
   template:
     src: homebridge.list.j2
-    dest: "{{ homebridge_apt_repo }}""
+    dest: "{{ homebridge_apt_repo }}"
     owner: root
     group: root
     mode: '0644'
