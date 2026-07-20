@@ -1,0 +1,10 @@
+---
+- name: Set debug Homebridge variables
+  set_fact:
+    homebridge_keyring: "{{ homebridge_debug_keyring }}"
+    homebridge_apt_repo: "{{ homebridge_debug_apt_repo }}"
+
+- name: Add nobody group 
+  group:
+    name: nobody
+    state: present

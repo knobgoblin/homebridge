@@ -1,0 +1,11 @@
+---
+homebridge_repo: repo.homebridge.io
+homebridge_key_location: https://{{ homebridge_repo }}/KEY.gpg
+homebridge_keyring: /usr/share/keyrings/homebridge.gpg
+homebridge_apt_repo: /etc/apt/sources.list.d/homebridge.list
+
+# Debug
+
+homebridge_debug: False
+homebridge_debug_owner: 'nobody'
+homebridge_debug_group: 'nobody'

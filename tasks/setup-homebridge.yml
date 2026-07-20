@@ -1,0 +1,22 @@
+---
+- name: Get GPG key
+  get_url:
+    url: "{{ homebridge_key_location }}"
+    dest: "{{ homebridge_keyring }}"
+    owner: root
+    group: root
+    mode: '0640'
+
+- name: Set up homebridge repository
+  template:
+    src: homebridge.list.j2
+    dest: "{{ homebridge_apt_repo }}""
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Install homebridge
+  apt:
+    deb: homebridge
+    state: present
+  when: not homebridge_debug
